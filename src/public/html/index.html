@@ -5,13 +5,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Node.js Static Website</title>
+    <title>sandbox.hoopes.io | Various coding experiments.</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    Node.js Static Website
-    <script src="js/index.js"></script>
+<body class="layouts">
+    <section class="hero is-primary">
+        <div class="container">
+            <div class="hero-body">
+                <p class="title has-text-white">
+                    Layouts
+                </p>
+                <p class="subtitle has-text-white">
+                    Layout experiments with the Bulma CSS framework
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section meta has-background-dark">
+        <div class="container">
+            <p class="has-text-white is-size-7">Version alpha 1.0.0</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+
+                <!-- Column One -->
+                <div class="column is-one-fifth has-background-info has-text-white">
+                    <div class="content">Column One</div>
+                    <div class="columns has-text-dark">
+                        <div class="column has-background-success">
+                            Left
+                        </div>
+                        <div class="column has-background-warning">
+                            Right
+                        </div>
+                    </div>
+                    <div class="content has-background-link has-text-white">Sub Content</div>
+                    <article class="message">
+                        <div class="message-header">
+                            <p>Hello...</p>
+                            <button class="delete" aria-label="delete"></button>
+                        </div>
+                        <div class="message-body has-text-dark">...from the other side.</div>
+                    </article>
+                </div>
+
+                <!-- Column Two -->
+                <div class="column has-background-info has-text-white">
+                    <div class="content">Column Two</div>
+                    <div class="columns has-text-dark">
+                        <div class="column has-background-success">
+                            Left
+                        </div>
+                        <div class="column has-background-warning">
+                            Right
+                        </div>
+                    </div>
+                    <div class="content has-background-link has-text-white">Sub Content</div>
+                    <div class="tabs-wrapper">
+                        <div class="tabs is-fullwidth">
+                            <ul class="has-background-grey-light">
+                                <li><a>A</a></li>
+                                <li><a>B</a></li>
+                                <li><a>C</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-background-light has-text-black">
+                            <section class="tab-content">A</section>
+                            <section class="tab-content">B</section>
+                            <section class="tab-content">C</section>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column Three -->
+                <div class="column is-one-fifth has-background-info has-text-white">
+                    <div class="content">Column Three</div>
+                    <div class="columns has-text-dark">
+                        <div class="column has-background-success">
+                            Left
+                        </div>
+                        <div class="column has-background-warning">
+                            Right
+                        </div>
+                    </div>
+                    <div class="content has-background-link has-text-white">Sub Content</div>
+                    <div class="card">
+                        <div class="card-content">
+                            <p>“Don't trust computers.”</p>
+                            <p>~ Some Programmer</p>
+                        </div>
+                        <footer class="card-footer"></footer>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/index.js" type="module"></script>
 </body>
 
 </html>

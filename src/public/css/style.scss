@@ -1,7 +1,83 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #000;
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
+/* Universal elements*/
+body, html {
+	background-color: #fafafa;
+}
+
+/* Hero styles */
+.hero {
+    padding: 0 1.5em;
+}
+.hero .container {
+    width: 100%;
+}
+.hero .container .hero-body {
+    padding: 2em 0 2em 0;
+}
+
+/* Meta bar styles */
+.meta {
+    padding: 0 1.5em;
+}
+.meta .container {
+    width: 100%;
+}
+.meta .container p {
+    padding: .25em 0;
+}
+
+/* Column styles */
+.column {
+    border-radius: .35em;
+    margin: 1em .5em;
+    text-align: center;
+}
+.column .content {
+    border-radius: .35em;
+}
+
+/* Tab styles */
+.layouts .tabs-wrapper {
+	border-radius: .35em;
+	position: relative;
+	overflow: hidden;
+}
+.layouts .tabs {
+	margin: 0;
+}
+.layouts .tabs ul li a {
+	border-bottom: 1px solid #888888;
+	color: #000000;
+}
+.layouts .tabs ul li a:hover {
+	color: #f5f5f5;
+}
+.layouts .tabs ul li.is-active a {
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+	border-left: 1px solid #888888;
+	border-right: 1px solid #888888;
+	color: #000000;
+}
+.layouts .tabs ul li:first-child.is-active a {
+	border-left: none;
+	border-right: 1px solid #888888;
+}
+.layouts .tabs ul li:last-child.is-active a {
+	border-bottom: 1px solid #f5f5f5;
+	border-left: 1px solid #888888;
+	border-right: none;
+}
+.layouts .tab-content {
+	display: none;
+	padding: 1em;
+}
+.layouts .tab-content.is-active {
+	display: block;
+}
+
+/* Footer styles */
+.footer {
+    width: 100%;
 }

@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "sandbox.hoopes.io | Various coding experiments.",
 	"main": "dist/app/index.js",
+	"type": "module",
 	"scripts": {
 		"build": "rimraf ./dist && tsc && sass ./src/public/css:./dist/public/css && cp -r ./src/public/html/* ./dist/public",
 		"predev": "npm run build",
