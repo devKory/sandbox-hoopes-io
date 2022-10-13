@@ -1,40 +1,84 @@
 @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css';
 
+/* SCSS colors */
+$color-primary: #335C67;
+$color-info: #4BA3C3;
+$color-success: #C5D86D;
+$color-warning: #E09F3E;
+$color-danger: #9E2A2B;
+$color-light: #AEAEAE;
+$color-lighter: #CECECE;
+$color-lightest: #FEFEFE;
+$color-dark: #555555;
+$color-darker: #333333;
+$color-darkest: #111111;
+
 /* Universal elements*/
 body,
 html {
-	background-color: #fafafa;
+	background-color: $color-lightest;
 }
 
+/* Utility styles */
+.background-primary {
+	background-color: $color-primary;
+}
+.background-info {
+	background-color: $color-info;
+}
+.background-success {
+	background-color: $color-success;
+}
+.background-warning {
+	background-color: $color-warning;
+}
+.background-danger {
+	background-color: $color-danger;
+}
+
+/* Components */
 .layouts {
 	/* Hero */
 	.hero {
+		background-color: $color-primary;
 		padding: 0 1.5em;
 
 		.container {
 			width: 100%;
 
 			.hero-body {
-				padding: 2em 0 2em 0;
+				padding: 2em 0;
+
+				.title {
+					color: $color-lightest;
+				}
+				.subtitle {
+					color: $color-lightest;
+				}
 			}
 		}
 	}
 
 	/* Meta information */
 	.meta {
+		background-color: $color-darkest;
+		color: $color-lightest;
 		padding: 0 1.5em;
 
 		.container {
 			width: 100%;
 
 			p {
-				padding: 0.25em 0;
+				font-size: .75em;
+				padding: .25em 0;
 			}
 		}
 	}
 
 	/* Columns */
 	.column {
+		background-color: $color-info;
+		color: $color-lightest;
 		border-radius: 0.35em;
 		margin: 1em 0.5em;
 		text-align: center;
@@ -47,6 +91,7 @@ html {
 	/* Tabs */
 	.tabs-wrapper {
 		border-radius: 0.35em;
+		background-color: $color-light;
 		position: relative;
 		overflow: hidden;
 
@@ -54,33 +99,35 @@ html {
 			margin: 0;
 
 			ul li a {
-				border-bottom: 1px solid #888888;
-				color: #000000;
+				border-bottom: 1px solid $color-dark;
+				color: $color-darker;
 			}
 
 			ul li a:hover {
-				background-color: #c9c9c9;
+				background-color: $color-lighter;
 			}
 
 			ul li.is-active a {
-				background-color: #f5f5f5;
-				border-bottom: 1px solid #f5f5f5;
-				border-left: 1px solid #888888;
-				border-right: 1px solid #888888;
+				background-color: $color-lightest;
+				border-bottom: 1px solid $color-lightest;
+				border-left: 1px solid $color-dark;
+				border-right: 1px solid $color-dark;
 			}
 
 			ul li.is-active:first-child a {
 				border-left: none;
-				border-right: 1px solid #888888;
+				border-right: 1px solid $color-dark;
 			}
 
 			ul li.is-active:last-child a {
-				border-left: 1px solid #888888;
+				border-left: 1px solid $color-dark;
 				border-right: none;
 			}
 		}
 
 		.tab-content {
+			background-color: $color-lightest;
+			color: $color-darker;
 			display: none;
 			padding: 1em;
 		}
@@ -92,6 +139,7 @@ html {
 
 	/* Footer */
 	.footer {
+		background-color: $color-lightest;
 		width: 100%;
 	}
 }
