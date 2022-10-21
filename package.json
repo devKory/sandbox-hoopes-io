@@ -5,14 +5,19 @@
 	"main": "dist/app/index.js",
 	"type": "module",
 	"scripts": {
-		"build": "rimraf ./dist && tsc && sass ./src/public/css:./dist/public/css && cp -r ./src/public/html/* ./dist/public",
-		"predev": "npm run build",
+		"predevBuild": "rimraf ./dist",
+		"devBuild": "tsc && sass ./src/public/css:./dist/public/css",
+		"postdevBuild": "cp ./src/vendors/css/* ./dist/public/css && cp -r ./src/public/html/* ./dist/public",
+		"predev": "npm run devBuild",
 		"dev": "NODE_ENV=development nodemon",
-		"predev:watch": "npm run build",
-		"dev:watch": "concurrently \"chokidar './src/public/html' -c 'npm run build'\" \"sass --watch ./src/public/css:./dist/public/css\" \"tsc --watch\"",
-		"preprod": "npm run build && rimraf dist/tests",
+		"predev:watch": "npm run devBuild",
+		"dev:watch": "chokidar './src/public' -c 'npm run build'",
+		"preprodBuild": "rimraf ./dist",
+		"prodBuild": "tsc && sass --no-source-map --style compressed ./src/public/css:./dist/public/css",
+		"postprodBuild": "cp ./src/vendors/css/* ./dist/public/css && cp -r ./src/public/html/* ./dist/public && rimraf ./dist/tests",
+		"preprod": "npm run prodBuild",
 		"prod": "NODE_ENV=production node dist/app/index.js",
-		"test": "npm run build && jest --verbose ./dist"
+		"test": "npm run devBuild && jest --verbose ./dist"
 	},
 	"repository": {
 		"type": "git",
@@ -27,7 +32,6 @@
 		"@types/express": "^4.17.14",
 		"@types/jest": "^29.1.2",
 		"chokidar-cli": "^3.0.0",
-		"concurrently": "^7.4.0",
 		"jest": "^29.1.2",
 		"nodemon": "^2.0.20",
 		"rimraf": "^3.0.2",
@@ -35,6 +39,7 @@
 		"typescript": "^4.8.4"
 	},
 	"dependencies": {
-		"express": "^4.18.2"
+		"express": "^4.18.2",
+		"g": "^2.0.1"
 	}
 }

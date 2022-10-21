@@ -1,3 +1,3 @@
-import tabs from './tabs.js';
+import { default as tabs }  from './tabs.js';
 
 tabs();

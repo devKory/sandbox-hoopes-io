@@ -1,4 +1,4 @@
-function tabs() {
+const $tabs = function() {
     document.querySelectorAll('.tabs-wrapper').forEach(tab => {
         const contents = tab.querySelectorAll('.tab-content');
         const items = tab.querySelectorAll('.tabs ul li');
@@ -22,4 +22,4 @@ function tabs() {
     }
 };
 
-export { tabs as default };
+export { $tabs as default };
